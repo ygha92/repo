@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+	  }
+	
+	.social-roll-1 {
+	background-image: url('http://bradsknutson.com/wp-content/themes/bradsknutson/images/twitter-48gray-circle.png');
+	height: 48px;
+	width: 48px;
+	margin: 10px;
+	float: left;
+	border-radius: 50%;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+    }
+    
+	.social-roll-1:hover {
+	background-image: url('http://bradsknutson.com/wp-content/themes/bradsknutson/images/twitter-48circle.png');
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+    }
+	
+	.social-roll-2 {
+	background-image: url('http://bradsknutson.com/wp-content/uploads/2013/06/youtube-circle-gray.png');
+	height: 48px;
+	width: 48px;
+	margin: 10px;
+	float: left;
+	border-radius: 50%;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+    }
+    
+	.social-roll-2:hover {
+	background-image: url('http://bradsknutson.com/wp-content/uploads/2013/06/youtube-circle-color.png');
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+    }
+	
+	.social-roll-3 {
+	background-image: url('http://bradsknutson.com/wp-content/themes/bradsknutson/images/instagram-48gray-circle.png');
+	height: 48px;
+	width: 48px;
+	margin: 10px;
+	float: left;
+	border-radius: 50%;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+    }
+    
+	.social-roll-3:hover {
+	background-image: url('http://bradsknutson.com/wp-content/themes/bradsknutson/images/instagram-48circle.png');
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+    }
+	
+	.social-roll-4 {
+	background-image: url('http://bradsknutson.com/wp-content/uploads/2013/06/rss-circle-gray.png');
+	height: 48px;
+	width: 48px;
+	margin: 10px;
+	float: left;
+	border-radius: 50%;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+    }
+    
+	.social-roll-4:hover {
+	background-image: url('http://bradsknutson.com/wp-content/uploads/2013/06/rss-circle-color.png');
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+    }
+	
+	footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    }	
+  </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1341" height="400" style="border:1px solid #d3d3d3; background-color:black;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+ctx.strokeStyle="grey";
+ctx.moveTo(0,0);
+ctx.lineTo(1347,400);
+ctx.stroke();
+ctx.moveTo(0,400);
+ctx.lineTo(1347,0);
+ctx.stroke();
+
+ctx.font = "50px Arial";
+ctx.fillStyle = "white";
+ctx.fillText("Automate your social media reporting", 280, 280);
+	
+make_base();
+
+function make_base()
+{
+  base_image = new Image();
+  base_image.src = "http://www.gabrielrojianaya.com/wp-content/uploads/2014/03/get-started-button.png";
+  base_image.onload = function(){
+    ctx.drawImage(base_image, 590, 320, 150, 40);
+  }
+}
+</script>
+
+<section style="text-align:center; padding-top:30px; color:black;">
+  <h4><b>Get this PowerPoint report delivered to your inbox each month</b></h4>            
+</section>
+
+<section>
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="http://socialstatus-assets.s3.amazonaws.com/assets/illustration-bubble-chart-b405705e6cc05451083a713cb3849dfd.png" alt="Bubble_chart" width="460" height="345">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://blog.socialstatus.io/images/posts/008/008-graphs-metrics-sm.jpg" alt="Social_strategies" width="460" height="345">
+        <div class="carousel-caption">
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="http://socialstatus-assets.s3.amazonaws.com/assets/illustration-charts-8f831e11465ba9215cef6d70c9d737e4.png" alt="Charts" width="460" height="345">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="http://socialstatus-assets.s3.amazonaws.com/assets/illustration-feed-e7bd9c90e8d62b4c1309f74a4888d1cc.png" alt="Feed" width="460" height="345">
+        <div class="carousel-caption">
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
+<section>
+<table style="text-align:auto; margin-left:auto; margin-right:auto; margin-bottom:40px;">
+  <tr>
+    <td colspan="2"><h3 style="padding:10px; margin-bottom:40px; margin-top:50px;"><b>Report contents:</b></h3></td>
+  </tr>
+  <tr>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="1">&nbsp;&nbsp;One page executive summary</p></td>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="7">&nbsp;&nbsp;<u>Conversion Rate (CVR)</u> performance benchmarked against historical performance</p></td>		
+  </tr>
+   <tr>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="2">&nbsp;&nbsp;Aggregate group performance metrics</p></td>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="8">&nbsp;&nbsp;Best performing days and times of the week</p></td>		
+  </tr>
+   <tr>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="3">&nbsp;&nbsp;Reach performance benchmarked against historical <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;performance</p></td>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="9">&nbsp;&nbsp;Media type performance against competitors</p></td>		
+  </tr>
+  <tr>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="4">&nbsp;&nbsp;<u>Engagement Rate (ER)</u> performance benchmarked <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;against historical performance, competitors and the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Australian Real Estate Industry ER Benchmark</p></td>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="10">&nbsp;&nbsp;Post frequency competitor analysis</p></td>		
+  </tr>
+  <tr>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="5">&nbsp;&nbsp;<u>Monthly Growth Rate (MGR)</u> performance benchmarked <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;against historical performance, competitors and the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Australian Real Estate Industry MGR Benchmark</p></td>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="11">&nbsp;&nbsp;Recommendations for how to improve performance</p></td>		
+  </tr>
+  <tr>
+    <td><p style="padding:10px;"><img src="http://www.icon100.com/up/3370/32/circle_checkmark.png" alt="6">&nbsp;&nbsp;<u>Click Through Rate (CTR)</u> performance benchmarked <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;against historical performance, competitors and the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Australian Real Estate Industry CTR Benchmark</p></td>
+	<td><p style="padding:10px;"></p></td>
+  </tr>
+</table>
+</section>
+
+<section style="background-color:black; color:white; padding:20px; width:1341px; height:280px;">
+<table style="margin-top:30px;" align="center">
+ <tr>
+  <td colspan="4"><h3 style="padding:10px;"><b>Supported social media channels:</b></h3></td>
+ </tr>
+ <tr>
+  <td><p style="padding:10px; text-align:center;" class="facebook-hover social-roll-1" title="Twitter Launching 2015 Q4"></p></td>
+  <td><p style="padding:10px;" class="youtube-hover social-roll-2" title="Youtube Launching 2015 Q4"></p></td>
+  <td><p style="padding:10px;" class="instagram-hover social-roll-3" title="Instagram Launching 2015 Q4"></p></td>
+  <td><p style="padding:10px;" class="rss-hover social-roll-4" title="RSS Launching 2016 Q1"></p></td>
+ </tr>
+</table>
+</section>
+
+<section style="background-color:white; color:black; padding:20px; width:1341px; height:300px;">
+<table style="margin-top:30px" align="center">
+ <tr>
+  <td colspan="2"><h3 style="padding:10px; text-align:center;"><b>Choose your report frequency:</b></h3></td>
+ </tr>
+ <tr>
+  <td><h3 style="padding:10px; text-align:center;"><img src="https://socialstatus-assets.s3.amazonaws.com/assets/icon-circle-email-a0d3582419dad629ae58c6df5d84413e.png" alt="Weekly Reports" style="width:200px; height:200px;"><br><br><b>Weekly Reports</b></h3><p style="text-align:center">Weekly reports are based on<br>ISO-8601 weeks starting on<br>Monday and ending on Sunday</p></td>
+  <td><h3 style="padding:10px; text-align:center;"><img src="https://socialstatus-assets.s3.amazonaws.com/assets/icon-circle-checklist-551b0364605df2b6c169b8dff1c4f1d3.png" alt="Monthly Reports" style="width:200px; height:200px;"><br><br><b>Monthly Reports</b></h3><p style="text-align:center">Choose from either:<br>&bull; Calendar month reports<br>&bull; Rolling 28-day reports</p></td>
+ </tr>
+</table>
+</section>
+
+<footer style="margin-top:250px;">
+Copyright &copy; Youn Kook HA
+</footer>
+</body>
+</html>
